@@ -1,0 +1,153 @@
+.productsSection {
+  background: var(--surface);
+  padding: 120px 24px;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.categoryCard {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryCard:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.12);
+}
+
+.imageWrapper {
+  overflow: hidden;
+  height: 250px;
+}
+
+.categoryImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.categoryCard:hover .categoryImage {
+  transform: scale(1.15);
+}
+
+.categoryContent {
+  padding: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryContent h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.categoryContent p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.cardFooter {
+  margin-top: auto;
+}
+
+.serviceHighlight {
+  background-color: white;
+  border-radius: 40px;
+  padding: 80px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+}
+
+.serviceContent {
+  width: 55%;
+}
+
+.serviceContent h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 32px;
+}
+
+.benefitList {
+  list-style: none;
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.benefitCheck {
+  background: var(--green-50);
+  color: var(--secondary);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceImage {
+  width: 45%;
+  border-radius: 30px;
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+  height: 500px;
+}
+
+@media (max-width: 1024px) {
+  .serviceHighlight {
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+  }
+  
+  .serviceContent, .serviceImage {
+    width: 100%;
+  }
+  
+  .serviceImage {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceHighlight {
+    padding: 30px 20px;
+  }
+  
+  .categoryContent {
+    padding: 24px;
+  }
+  
+  .benefitList {
+    grid-template-columns: 1fr;
+  }
+}

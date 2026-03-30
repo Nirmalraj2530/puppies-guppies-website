@@ -1,0 +1,114 @@
+.contactSection {
+  background: var(--surface);
+  padding: 120px 24px;
+}
+
+.contactContainer {
+  display: flex;
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.contactInfoArea {
+  flex: 1;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapArea {
+  flex: 1.2;
+  position: relative;
+}
+
+.openBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--green-100);
+  color: var(--secondary);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+}
+
+.openDot {
+  width: 10px;
+  height: 10px;
+  background: var(--secondary);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+.infoCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.infoCard {
+  display: flex;
+  gap: 24px;
+}
+
+.infoIcon {
+  width: 64px;
+  height: 64px;
+  background: var(--blue-50);
+  color: var(--primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoContent h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.infoContent p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.quickActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+  
+  .contactInfoArea {
+    padding: 60px 40px;
+  }
+  
+  .mapArea {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactInfoArea {
+    padding: 40px 24px;
+  }
+}

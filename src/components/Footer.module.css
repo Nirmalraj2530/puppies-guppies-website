@@ -1,0 +1,90 @@
+.footer {
+  background: var(--text);
+  color: white;
+  padding: 80px 20px 40px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footerLogoArea h3 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.footerLogoArea p {
+  color: #adb5bd;
+  line-height: 1.6;
+}
+
+.footerColumn h4 {
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+
+.footerLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footerLink {
+  color: #adb5bd;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: white;
+}
+
+.footerBottom {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid #343a40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.socialIcon {
+  background: #343a40;
+  padding: 8px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.socialIcon:hover {
+  transform: translateY(-4px);
+  background: var(--blue-600);
+}
+
+.stickyCall {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .footerBottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

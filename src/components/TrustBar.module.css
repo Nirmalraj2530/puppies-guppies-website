@@ -1,0 +1,46 @@
+.trustBar {
+  background: white;
+  padding: 60px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.stat h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text);
+  line-height: 1;
+}
+
+.stat p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .stat {
+    width: 100%;
+    justify-content: center;
+    text-align: left;
+  }
+}
