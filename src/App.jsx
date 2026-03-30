@@ -11,9 +11,16 @@ import CtaStrip from './components/CtaStrip';
 import StickyMobileBar from './components/StickyMobileBar';
 import WhatsAppButton from './components/WhatsAppButton';
 
+import { motion } from 'framer-motion';
+
 function App() {
   return (
-    <div className="app">
+    <motion.div 
+      className="app"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <Navbar />
       <main>
         <Hero />
@@ -27,7 +34,7 @@ function App() {
       <Footer />
       <StickyMobileBar />
       <WhatsAppButton />
-    </div>
+    </motion.div>
   );
 }
 

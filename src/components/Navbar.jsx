@@ -26,9 +26,7 @@ const Navbar = () => {
     <nav className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ''}`}>
       <div className={styles.navContainer}>
         <div className={styles.logoArea}>
-          <div className={styles.logoIcon}>
-            <ShoppingBag size={24} />
-          </div>
+          <img src="/assets/logo.png" alt="Puppies 2 Guppies Logo" style={{ height: '50px', borderRadius: '10px' }} />
           <span className={styles.logoText}>Puppies 2 Guppies</span>
         </div>
 

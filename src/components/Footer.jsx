@@ -8,10 +8,8 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles.footerGrid}>
           <div className={styles.footerLogoArea}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'white', marginBottom: '24px' }}>
-              <div style={{ background: 'var(--blue-600)', padding: '8px', borderRadius: '8px', color: 'white' }}>
-                <ShoppingBag size={24} />
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'white', marginBottom: '24px' }}>
+              <img src="/assets/logo.png" alt="Logo" style={{ height: '60px', borderRadius: '12px' }} />
               <h3 style={{ margin: 0 }}>Puppies 2 Guppies</h3>
             </div>
             <p>Welcome to Puppies 2 Guppies, your go-to store for all pet essentials! We offer a wide range of premium pet food, toys, grooming products, and accessories to keep your pets happy and healthy.</p>
